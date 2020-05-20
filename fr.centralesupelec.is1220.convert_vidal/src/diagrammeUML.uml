@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_8e8U8JhOEeqmT-G9TsXjrw" name="diagrammeUML" visibility="public">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_8gsocJhOEeqmT-G9TsXjrw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_DEE14JhPEeqmT-G9TsXjrw" name="Station">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_HG7AQJhPEeqmT-G9TsXjrw" name="x_gps">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_M7HzgJhPEeqmT-G9TsXjrw" name="y_gps" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_QEYqgJhPEeqmT-G9TsXjrw" name="id_station">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_UOeFUJhPEeqmT-G9TsXjrw" name="type">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_iHfqoJhPEeqmT-G9TsXjrw" name="status" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_lOSxkJhREeqmT-G9TsXjrw" name="slots"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_nqXdUJhPEeqmT-G9TsXjrw" name="Slot">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_rcRBoJhPEeqmT-G9TsXjrw" name="id_slot">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_uKXmoJhPEeqmT-G9TsXjrw" name="status" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_yjeC8JhREeqmT-G9TsXjrw" name="Bicycle">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_0rgGcJhREeqmT-G9TsXjrw" name="id_velo">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_5S0P0JhREeqmT-G9TsXjrw" name="type">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_8TbhIJhREeqmT-G9TsXjrw" name="status">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_BsvvMJhSEeqmT-G9TsXjrw" name="User">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_EPzh0JhSEeqmT-G9TsXjrw" name="name">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_F8Y_cJhSEeqmT-G9TsXjrw" name="id_user">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_LgC1QJhSEeqmT-G9TsXjrw" name="x_gps">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_OGLKAJhSEeqmT-G9TsXjrw" name="y_gps" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Ro-iYJhSEeqmT-G9TsXjrw" name="id_creditCard">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_VjM8QJhSEeqmT-G9TsXjrw" name="timecreditBalance">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_YKNawJhSEeqmT-G9TsXjrw" name="totalBalance">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_a9-i4JhSEeqmT-G9TsXjrw" name="Cards">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_dvu40JhSEeqmT-G9TsXjrw" name="type">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_yxOVoJhSEeqmT-G9TsXjrw" name="id_card">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedAttribute>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_VN0NAJhQEeqmT-G9TsXjrw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VN1bIJhQEeqmT-G9TsXjrw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>
