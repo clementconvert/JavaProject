@@ -2,7 +2,7 @@ package fr.centralesupelec.is1220.convert_vidal.myVelib_core;
 
 import java.util.ArrayList;
 
-public class Station {
+public class Station implements Observer{
 	private double x_gps;
 	private double y_gps;
 	private boolean onService;
@@ -103,8 +103,48 @@ public class Station {
 
 	@Override
 	public String toString() {
-		return "The Station n°" +idStation +" of type " + type + " is " + onService + "and has "+ stationSize + " slots";
+		return "The Station n°" +idStation +" of type " + type + " is " + (onService? "on service " : "out of order ") + "and has "+ stationSize + " slots";
 	}
+
+
+	@Override
+	public void updateBalance(Bike bike) {
+		
+	}
+
+
+	@Override
+	public void updateStation(Bike bike, String movement) {
+		if (movement == "rent") {
+			for (ParkingSlot slot : this.slots) {
+				if (slot.getBike()==bike) {
+					slot.setState("free");
+					slot.setBike(null);
+					int k = slot.getIdSlot()-1;
+					this.slots.set(k, slot);
+				}
+			}
+		}
+		else if (movement == "drop") {
+			int k = 0;
+			boolean flag  = false;
+			for (ParkingSlot slot : this.slots) {
+				while (flag == false) {
+					if (slot.getState() == "free") {
+						slot.setState("full");
+						slot.setBike(bike);
+						this.slots.set(k, slot);
+						flag = true;
+					}
+					else {
+						k++;
+					}
+				}
+			}
+		}
+	}
+	
+	
 	
 	
 }

@@ -11,6 +11,7 @@ public class ParkingSlot {
 		count++;
 		this.state = state;
 		this.idSlot=this.count; //pour l'instant j'ai mis un compteur
+		this.bike = null;
 	}
 
 	public int getIdSlot() {
