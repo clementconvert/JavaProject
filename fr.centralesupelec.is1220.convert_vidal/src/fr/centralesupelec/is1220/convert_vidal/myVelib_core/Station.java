@@ -10,7 +10,7 @@ public class Station implements Observer{
 	private String type;
 	private ArrayList<ParkingSlot> slots; //liste de slots composant une station
 	private int idStation; //a modifier si singleton pattern
-	// rajouter objet terminal quand la classe aura ete créée
+	// rajouter objet terminal quand la classe aura ete crï¿½ï¿½e
 	
 	
 	public Station(double x_gps, double y_gps, boolean onService, String type, int idStation, int stationSize) {
@@ -27,7 +27,7 @@ public class Station implements Observer{
 			this.slots.add(slot);
 		}
 		// a continuer
-		//j'aimerai implémenter ici la fonction qui crée une liste de slots de taille stationSize
+		//j'aimerai implï¿½menter ici la fonction qui crï¿½e une liste de slots de taille stationSize
 		}
 
 
@@ -103,7 +103,7 @@ public class Station implements Observer{
 
 	@Override
 	public String toString() {
-		return "The Station n°" +idStation +" of type " + type + " is " + (onService? "on service " : "out of order ") + "and has "+ stationSize + " slots";
+		return "The Station nï¿½" +idStation +" of type " + type + " is " + (onService? "on service " : "out of order ") + "and has "+ stationSize + " slots";
 	}
 
 
@@ -142,6 +142,10 @@ public class Station implements Observer{
 				}
 			}
 		}
+	}
+	
+	public double distance(Station station) {
+		return Math.hypot(this.x_gps - station.getX_gps(), this.y_gps - station.getY_gps());
 	}
 	
 	
