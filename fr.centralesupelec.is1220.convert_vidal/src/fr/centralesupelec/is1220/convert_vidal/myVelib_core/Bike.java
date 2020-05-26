@@ -2,10 +2,10 @@ package fr.centralesupelec.is1220.convert_vidal.myVelib_core;
 
 public class Bike {
 	private int id;
-	private BikeType bikeType;
+	private String bikeType;
 	private static int counter;//We also want each bike to have a unique id
 	
-	public Bike(BikeType bikeType) {
+	public Bike(String bikeType) {
 		super();
 		counter++;
 		this.id = counter;
@@ -26,7 +26,7 @@ public class Bike {
 		return id;
 	}
 
-	public BikeType getBikeType() {
+	public String getBikeType() {
 		return bikeType;
 	}
 	
