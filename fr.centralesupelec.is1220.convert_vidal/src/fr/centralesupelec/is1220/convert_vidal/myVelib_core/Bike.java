@@ -3,12 +3,11 @@ package fr.centralesupelec.is1220.convert_vidal.myVelib_core;
 public class Bike {
 	private int id;
 	private String bikeType;
-	private static int counter;//We also want each bike to have a unique id
+	private SerialNumberGenerator gen = SerialNumberGenerator.getInstance();//We also want each bike to have a unique id
 	
 	public Bike(String bikeType) {
 		super();
-		counter++;
-		this.id = counter;
+		this.id = gen.getNextSerialNumber();
 		this.bikeType = bikeType;
 	}
 
@@ -18,7 +17,7 @@ public class Bike {
 
 	@Override
 	public String toString() {
-		return "Bike n°" + id + " is a " + bikeType + "bike";
+		return "Bike n°" + id + " is a " + bikeType + " bike";
 	}
 
 	//Once the bike is created, one cannot set its id nor its type
@@ -29,8 +28,6 @@ public class Bike {
 	public String getBikeType() {
 		return bikeType;
 	}
-	
-	
 	
 
 }
