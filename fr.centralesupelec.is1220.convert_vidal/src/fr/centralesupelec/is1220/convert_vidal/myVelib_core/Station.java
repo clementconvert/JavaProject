@@ -148,7 +148,23 @@ public class Station implements Observer{
 		return Math.hypot(this.x_gps - station.getX_gps(), this.y_gps - station.getY_gps());
 	}
 	
+	public double distance(User user) {
+		return Math.hypot(this.x_gps - user.getX_gps(), this.y_gps - user.getY_gps());
+	}
 	
+	public boolean existTypeBike(String typeBike) { //On a besoin de cette méthode pour PlannedRide
+		for (ParkingSlot slot : slots) {
+			if (slot.getBike().getBikeType() == typeBike)
+					return true;
+		}
+		return false;
+		}
 	
-	
+	public boolean existFreeSlot() { //De la même manière on utilisera cette fonction dans PlannedRide
+		for (ParkingSlot slot : slots) {
+			if (slot.getState() == "free")
+				return true;
+		}
+		return false;
+	}
 }
