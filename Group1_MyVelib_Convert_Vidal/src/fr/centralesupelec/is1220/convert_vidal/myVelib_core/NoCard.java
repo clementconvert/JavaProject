@@ -1,10 +1,10 @@
 package fr.centralesupelec.is1220.convert_vidal.myVelib_core;
 
-public class NoCard extends Card implements CardPrice {
+public class NoCard extends Card {
 
 	@Override
 	public double cost(Ride ride) {
-		if (ride.getBike().getBikeType() == "mechanical") {
+		if (ride.getRideType() == "mechanical") {
 			return ride.duration()/60.0; // Une heure de vélo coute ici 1€
 		}
 		else { //Dans ce cas le type de bike sera forcément électrique

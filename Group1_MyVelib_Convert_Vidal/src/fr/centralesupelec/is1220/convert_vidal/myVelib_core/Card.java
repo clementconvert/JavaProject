@@ -1,6 +1,6 @@
 package fr.centralesupelec.is1220.convert_vidal.myVelib_core;
 
-public class Card {
+public class Card implements CardPrice{
 	private double timeBalance;
 	
 	
@@ -12,7 +12,7 @@ public class Card {
 
 	@Override
 	public String toString() {
-		return "Card time balance : " + timeBalance + "min";
+		return "Card time balance : " + timeBalance + " min";
 	}
 
 
@@ -23,6 +23,17 @@ public class Card {
 
 	public void setTimeBalance(double timeBalance) {
 		this.timeBalance = timeBalance;
+	}
+	
+	public void addTimeBalance(double timeCredit) {
+		this.timeBalance+=timeCredit;
+	}
+
+
+	@Override
+	public double cost(Ride ride) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	//We do not generate a setCardType because once the card is created one cannot change its type.

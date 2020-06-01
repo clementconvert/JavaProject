@@ -3,14 +3,14 @@ package fr.centralesupelec.is1220.convert_vidal.myVelib_core;
 public class Ride {
 	private Station departure;
 	private Station arrival;
-	private Bike bike;
+	private String rideType; //on electrical or mechanical bike
 	private User user;
 	
-	public Ride(Station departure, Bike bike, User user) {
+	public Ride(Station departure, String bikeType, User user) {
 		super();
 		this.departure = departure;
 		this.arrival = null; //Le arrival sera set lors du dépot du vélo
-		this.bike = bike;
+		this.rideType = bikeType;
 		this.user = user;
 	}
 	
@@ -35,13 +35,13 @@ public class Ride {
 	}
 
 
-	public Bike getBike() {
-		return bike;
+	public String getRideType() {
+		return rideType;
 	}
 
 
-	public void setBike(Bike bike) {
-		this.bike = bike;
+	public void setRideType(String rideType) {
+		this.rideType = rideType;
 	}
 
 

@@ -3,14 +3,14 @@ package fr.centralesupelec.is1220.convert_vidal.myVelib_core;
 public class ParkingSlot {
 	private static int count;
 	private int idSlot;  // a modifier si on utilise un singleton pattern
-	private String state; // "full" "out of service" "empty"
+	private String state; // "full" "out of service" "free"
 	private Bike bike;   //on lui attribue le velo qu'il contient ou null s'il n'y en a pas
 	
-	public ParkingSlot(String state) {
+	public ParkingSlot() {
 		super();
 		count++;
-		this.state = state;
-		this.idSlot=this.count; //pour l'instant j'ai mis un compteur
+		this.state = "free";
+		this.idSlot=this.count; 
 		this.bike = null;
 	}
 
