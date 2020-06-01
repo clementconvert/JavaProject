@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_2pqlQKQjEeqVd68BhP6nXg" name="model">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_2xZk8KQjEeqVd68BhP6nXg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Mhi3gKQkEeqVd68BhP6nXg" name="User"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_OLkwYKQkEeqVd68BhP6nXg" name="Card"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_OZJSUKQkEeqVd68BhP6nXg" name="NoCard" visibility="public">
+    <generalization xmi:type="uml:Generalization" xmi:id="_oepJoKQmEeqVd68BhP6nXg" general="_OLkwYKQkEeqVd68BhP6nXg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_OkMEsKQkEeqVd68BhP6nXg" name="Vlibre">
+    <generalization xmi:type="uml:Generalization" xmi:id="_p4obYKQmEeqVd68BhP6nXg" general="_OLkwYKQkEeqVd68BhP6nXg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_OpCvgKQkEeqVd68BhP6nXg" name="Vmax">
+    <generalization xmi:type="uml:Generalization" xmi:id="__eQgAKQmEeqVd68BhP6nXg" general="_OLkwYKQkEeqVd68BhP6nXg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_-yM9MKQkEeqVd68BhP6nXg" name="CardPrice">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_UYClwKQ8EeqVd68BhP6nXg" name="cost"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_IoUtwKQlEeqVd68BhP6nXg" name="Bike">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_psoKQKQnEeqVd68BhP6nXg" name="parkingslot" type="_OGBFgKQlEeqVd68BhP6nXg" aggregation="composite" association="_pslG8KQnEeqVd68BhP6nXg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Yty6gKQ7EeqVd68BhP6nXg" name="id" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_grw2oKQ7EeqVd68BhP6nXg" name="bikeType" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_nffNMKQ7EeqVd68BhP6nXg" name="gen" visibility="private" type="_s79e8KQlEeqVd68BhP6nXg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_I4IrYKQlEeqVd68BhP6nXg" name="Station"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_OGBFgKQlEeqVd68BhP6nXg" name="ParkingSlot">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_SumIQKQnEeqVd68BhP6nXg" name="station" type="_I4IrYKQlEeqVd68BhP6nXg" aggregation="composite" association="_SugosKQnEeqVd68BhP6nXg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Y-iuQKQlEeqVd68BhP6nXg" name="PlannedRide"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_aVWwMKQlEeqVd68BhP6nXg" name="Ride"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_s79e8KQlEeqVd68BhP6nXg" name="SerialNumberGenerator">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_3flj0aQnEeqVd68BhP6nXg" name="bike" type="_IoUtwKQlEeqVd68BhP6nXg" aggregation="composite" association="_3fkVsKQnEeqVd68BhP6nXg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_h4U88KQmEeqVd68BhP6nXg" client="_OLkwYKQkEeqVd68BhP6nXg" supplier="_-yM9MKQkEeqVd68BhP6nXg"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_SugosKQnEeqVd68BhP6nXg" memberEnd="_SumIQKQnEeqVd68BhP6nXg _Sun9caQnEeqVd68BhP6nXg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_SukTEKQnEeqVd68BhP6nXg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_SukTEaQnEeqVd68BhP6nXg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Sun9caQnEeqVd68BhP6nXg" name="parkingslot" type="_OGBFgKQlEeqVd68BhP6nXg" association="_SugosKQnEeqVd68BhP6nXg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YJdOcKQnEeqVd68BhP6nXg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_pslG8KQnEeqVd68BhP6nXg" memberEnd="_psoKQKQnEeqVd68BhP6nXg _pspYYaQnEeqVd68BhP6nXg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_psm8IKQnEeqVd68BhP6nXg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_psnjMKQnEeqVd68BhP6nXg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_pspYYaQnEeqVd68BhP6nXg" name="bike" type="_IoUtwKQlEeqVd68BhP6nXg" association="_pslG8KQnEeqVd68BhP6nXg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_3fkVsKQnEeqVd68BhP6nXg" memberEnd="_3flj0aQnEeqVd68BhP6nXg _3fmK4qQnEeqVd68BhP6nXg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3fk8wKQnEeqVd68BhP6nXg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3flj0KQnEeqVd68BhP6nXg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_3fmK4qQnEeqVd68BhP6nXg" name="serialnumbergenerator" type="_s79e8KQlEeqVd68BhP6nXg" association="_3fkVsKQnEeqVd68BhP6nXg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_Mm92IKQ8EeqVd68BhP6nXg" client="_-yM9MKQkEeqVd68BhP6nXg" supplier="_aVWwMKQlEeqVd68BhP6nXg"/>
+</uml:Model>
