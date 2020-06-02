@@ -1,7 +1,5 @@
 package fr.centralesupelec.is1220.convert_vidal.myVelib_core;
 
-import java.util.ArrayList;
-
 public class User {
 	private double x_gps;
 	private double y_gps;
@@ -15,6 +13,7 @@ public class User {
 	private Station rentStation;
 	private Station dropStation;
 	private int numberOfRents;
+	private double timeSpentOnBike;
 
 	public User(String name, double x_gps, double y_gps, int creditCard, Card card) { //One can create a null card if he doesn't want one
 		super();
@@ -30,7 +29,9 @@ public class User {
 		this.dropStation = null; // both will be used to register the trip of the bike (from where to where)
 		this.rentStation = null;
 		this.numberOfRents =0;
+		this.setTimeSpentOnBike(0);
 	}
+	
 
 	@Override
 	public String toString() {
@@ -125,6 +126,16 @@ public class User {
 		this.numberOfRents = numberOfRents;
 	}
 
+	public double getTimeSpentOnBike() {
+		return timeSpentOnBike;
+	}
+
+
+	public void setTimeSpentOnBike(double timeSpentOnBike) {
+		this.timeSpentOnBike = timeSpentOnBike;
+	}
+
+
 	public void rentBike(User user, double x_destination, double y_destination, String bikeType, MyVelib system) {
         // Planning returns a station where there is a bicycle, we don't need to check again
 		PlannedRide planned_ride = new PlannedRide(user, x_destination, y_destination,bikeType,system);
@@ -161,8 +172,9 @@ public class User {
         Ride ride = new Ride(user.getRentStation(),bikeType,user);
         ride.setArrival(user.getDropStation());
         
-        // Compute the rent cost for the user
+        // Compute the rent cost for the user and increment time on bike
         double price = user.getCard().cost(ride);
+        user.setTimeSpentOnBike(user.getTimeSpentOnBike()+ride.duration());
         
         // Take the money of the user !!!!
         user.setBalance(user.getBalance() + price);  //on ajoute le prix de la course, ainsi la balance est en fait le prix cumulé de tous les trajets
