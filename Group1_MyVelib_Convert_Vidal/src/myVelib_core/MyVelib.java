@@ -28,6 +28,8 @@ public class MyVelib {
 			 7.252497732328194,
 			 4.001261903478791,
 			 6.6273138729798635};
+	//on crée une liste aléatoire avant le constructeur pour éviter d'avoir des stations différentes
+	//à chaque fois qu'on crée un nouvel objet. C'est surtout utile pour que les tests ne marchent pas aléatoirement
 	
 	public MyVelib() {
 		super();
