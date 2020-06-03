@@ -1,4 +1,4 @@
-package fr.centralesupelec.is1220.convert_vidal.myVelib_core;
+package myVelib_core;
 
 import java.util.ArrayList;
 

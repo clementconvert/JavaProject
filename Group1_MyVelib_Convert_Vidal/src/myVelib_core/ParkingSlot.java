@@ -1,4 +1,4 @@
-package fr.centralesupelec.is1220.convert_vidal.myVelib_core;
+package myVelib_core;
 
 public class ParkingSlot {
 	private static int count;
@@ -41,6 +41,40 @@ public class ParkingSlot {
 	@Override
 	public String toString() {
 		return " The parking slot n°" + idSlot + " is " + state;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((bike == null) ? 0 : bike.hashCode());
+		result = prime * result + idSlot;
+		result = prime * result + ((state == null) ? 0 : state.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ParkingSlot other = (ParkingSlot) obj;
+		if (bike == null) {
+			if (other.bike != null)
+				return false;
+		} else if (!bike.equals(other.bike))
+			return false;
+		if (idSlot != other.idSlot)
+			return false;
+		if (state == null) {
+			if (other.state != null)
+				return false;
+		} else if (!state.equals(other.state))
+			return false;
+		return true;
 	}
 
 }

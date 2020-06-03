@@ -1,4 +1,4 @@
-package fr.centralesupelec.is1220.convert_vidal.myVelib_core;
+package myVelib_core;
 
 import java.util.ArrayList;
 
@@ -145,6 +145,60 @@ public class Station{
 				return true;
 		}
 		return false;
+	}
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + idStation;
+		result = prime * result + numberOfOperations;
+		result = prime * result + (onService ? 1231 : 1237);
+		result = prime * result + ((slots == null) ? 0 : slots.hashCode());
+		result = prime * result + stationSize;
+		result = prime * result + ((type == null) ? 0 : type.hashCode());
+		long temp;
+		temp = Double.doubleToLongBits(x_gps);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		temp = Double.doubleToLongBits(y_gps);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		return result;
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Station other = (Station) obj;
+		if (idStation != other.idStation)
+			return false;
+		if (numberOfOperations != other.numberOfOperations)
+			return false;
+		if (onService != other.onService)
+			return false;
+		if (slots == null) {
+			if (other.slots != null)
+				return false;
+		} else if (!slots.equals(other.slots))
+			return false;
+		if (stationSize != other.stationSize)
+			return false;
+		if (type == null) {
+			if (other.type != null)
+				return false;
+		} else if (!type.equals(other.type))
+			return false;
+		if (Double.doubleToLongBits(x_gps) != Double.doubleToLongBits(other.x_gps))
+			return false;
+		if (Double.doubleToLongBits(y_gps) != Double.doubleToLongBits(other.y_gps))
+			return false;
+		return true;
 	}
 }
 

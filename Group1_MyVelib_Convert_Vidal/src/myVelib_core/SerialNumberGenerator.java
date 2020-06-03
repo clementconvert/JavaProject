@@ -1,4 +1,4 @@
-package fr.centralesupelec.is1220.convert_vidal.myVelib_core;
+package myVelib_core;
 
 public class SerialNumberGenerator {//On a besoin de ceci pour avoir un unique identifiant pour les vélos
 
