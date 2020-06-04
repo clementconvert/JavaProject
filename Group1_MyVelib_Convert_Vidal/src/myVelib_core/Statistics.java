@@ -48,6 +48,7 @@ public class Statistics {
 		for (Station station : this.stations) {
 			if (station.getIdStation() == stationId) {
 				found = station;
+				break;
 			}
 		}
 		return found;

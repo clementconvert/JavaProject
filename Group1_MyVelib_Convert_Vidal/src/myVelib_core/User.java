@@ -21,7 +21,7 @@ public class User {
 		this.y_gps = y_gps;
 		this.counter++;
 		this.name = name;
-		this.id = this.counter;
+		this.id = counter;
 		this.creditCard = creditCard;
 		this.card = card;
 		this.balance = 0.0; // When we create a user his charges ar automatically set to 0
@@ -197,6 +197,80 @@ public class User {
         user.setNumberOfRents(user.getNumberOfRents()+1);
 
     }
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		long temp;
+		temp = Double.doubleToLongBits(balance);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + ((card == null) ? 0 : card.hashCode());
+		result = prime * result + creditCard;
+		result = prime * result + ((dropStation == null) ? 0 : dropStation.hashCode());
+		result = prime * result + id;
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + numberOfRents;
+		result = prime * result + (onBike ? 1231 : 1237);
+		result = prime * result + ((rentStation == null) ? 0 : rentStation.hashCode());
+		temp = Double.doubleToLongBits(timeSpentOnBike);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		temp = Double.doubleToLongBits(x_gps);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		temp = Double.doubleToLongBits(y_gps);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		return result;
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		User other = (User) obj;
+		if (Double.doubleToLongBits(balance) != Double.doubleToLongBits(other.balance))
+			return false;
+		if (card == null) {
+			if (other.card != null)
+				return false;
+		} else if (!card.equals(other.card))
+			return false;
+		if (creditCard != other.creditCard)
+			return false;
+		if (dropStation == null) {
+			if (other.dropStation != null)
+				return false;
+		} else if (!dropStation.equals(other.dropStation))
+			return false;
+		if (id != other.id)
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		if (numberOfRents != other.numberOfRents)
+			return false;
+		if (onBike != other.onBike)
+			return false;
+		if (rentStation == null) {
+			if (other.rentStation != null)
+				return false;
+		} else if (!rentStation.equals(other.rentStation))
+			return false;
+		if (Double.doubleToLongBits(timeSpentOnBike) != Double.doubleToLongBits(other.timeSpentOnBike))
+			return false;
+		if (Double.doubleToLongBits(x_gps) != Double.doubleToLongBits(other.x_gps))
+			return false;
+		if (Double.doubleToLongBits(y_gps) != Double.doubleToLongBits(other.y_gps))
+			return false;
+		return true;
+	}
 
 	
 

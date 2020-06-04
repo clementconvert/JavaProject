@@ -30,9 +30,9 @@ public class StationTest {
 			slot.setBike(bike);
 			slot.setState("full");
 			}
-		ParkingSlot slotElectrical = station1.getSlots().get(6); //on met l'indice 6 car la fonction getSLot prend toujours le dernier slot ou il y a un velo du type demandé
+		ParkingSlot slotElectrical = station1.getSlots().get(5); //on met l'indice 5 car la fonction getSLot prend toujours le premier slot ou il y a un velo du type demandé
 		
-		ParkingSlot slotMechanical = station1.getSlots().get(4); //on met l'indice 4 car on s'attend a avoir le slot en position 5(donc indice 5-1) car les 5 premiers slots contiennent des velos mecaniques
+		ParkingSlot slotMechanical = station1.getSlots().get(0); //on met l'indice 0 car on s'attend a avoir le slot en position 1(donc indice 1-1) car les 5 premiers slots contiennent des velos mecaniques
 		
 		assertTrue(station1.getSlotbyBike("electrical").equals(slotElectrical));
 		assertTrue(station1.getSlotbyBike("mechanical").equals(slotMechanical));
@@ -52,7 +52,7 @@ public class StationTest {
 			slot.setBike(bike);
 			slot.setState("full");
 			}
-		ParkingSlot freeSlot = station1.getSlots().get(9); //encore une fois getFreeSlot prend le dernier slot de libre
+		ParkingSlot freeSlot = station1.getSlots().get(7); //encore une fois getFreeSlot prend le premier slot de libre
 		assertTrue(station1.getFreeSlot().equals(freeSlot));
 	}
 

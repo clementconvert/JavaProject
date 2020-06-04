@@ -86,27 +86,27 @@ public class Station{
 	}
 
 	public ParkingSlot getSlotbyBike(String bikeType) {
-		ParkingSlot associatedSlot = new ParkingSlot();
-		try {
+		ParkingSlot associatedSlot = null;
+		
 		for (ParkingSlot slot : slots) {
 			if (slot.getBike().getBikeType() == bikeType) {
 				associatedSlot = slot;
+				break;
 			}
 		}
-		}catch(NullPointerException e) {
-			System.out.println("Slot is free");
-		}finally {
-		return associatedSlot;}
+		return associatedSlot;
 	}
+		
 	public int getNumberOfOperations() {
 		return numberOfOperations;
 	}
 	
 	public ParkingSlot getFreeSlot() {
-		ParkingSlot freeSlot = new ParkingSlot();
+		ParkingSlot freeSlot = null;
 		for (ParkingSlot slot : slots) {
 			if (slot.getState()=="free") {
 				freeSlot = slot;
+				break;
 			}
 		}
 		return freeSlot;

@@ -25,7 +25,7 @@ public class PlannedRideTest {
 	}
 
 	@Test
-	public void testGetEndingStation() { //on s'attend ici a voir la station 7
+	public void testGetEndingStation() { //on s'attend ici a voir la station 6
 		assertTrue(planned_ride.getEndingStation().equals(system.getSystemStations().get(5)));  //la station n°6 est celle d'indice 5
 	}
 
